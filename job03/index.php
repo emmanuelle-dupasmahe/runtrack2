@@ -21,21 +21,21 @@ $variables = [
 <style>
 table {
 border-collapse: collapse;
-width: 100%;
+width: 500px;
 }
 th, td {
-border: 1px solid #ddd;
+border: 2px solid #541ae8ff;
 padding: 8px;
 text-align: left;
 }
 th {
-background-color: #f2f2f2;
+background-color: #bae3eeff;
 }
 </style>
 </head>
 <body>
 
-<h2>Tableau des variables primitives PHP</h2>
+<h2>Tableau des variables primitives sur PHP</h2>
 
 <table>
 <thead>
