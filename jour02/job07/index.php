@@ -4,7 +4,7 @@
 $hauteur = 5;
 for ($i = 1; $i <= $hauteur; $i++) {
     for ($j = 1; $j <= $hauteur - $i; $j++) {
-        echo "&nbsp;&nbsp;"; // Un espace insécable pour un bon alignement
+        echo "&nbsp;&nbsp;"; // Un espace insécable
     }
     for ($k = 1; $k <= (2 * $i) - 1; $k++) {
         echo "*";
