@@ -46,7 +46,7 @@ background-color: #bae3eeff;
 </tr>
 </thead>
 <tbody>
-<?php foreach ($variables as $variable): ?>
+<?php foreach ($variables as $variable): ?> <!--utilsation de la condition for dans php-->
 <tr>
 <td><?php echo htmlspecialchars($variable['type']); ?></td>
 <td><?php echo htmlspecialchars($variable['name']); ?></td>
