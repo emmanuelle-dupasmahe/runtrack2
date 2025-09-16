@@ -43,8 +43,8 @@ $taux = 95.5;
 echo "Le taux de réussite est de : ". $taux." %"."<br>"."<br>"."<br>";
 
 //première utilsation de if
-$ouvert = false;
-if ($ouvert == true) {
+$ouvert = true;
+if ($ouvert != false) {
     echo "L'inscription est possible";
 }
 else {
