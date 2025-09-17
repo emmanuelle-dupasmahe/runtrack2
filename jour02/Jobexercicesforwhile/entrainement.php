@@ -1,5 +1,5 @@
 <?php
-/* ."<br>"."<br>" Affiche les 10 premiers nombres pairs.*/ 
+/* " Affiche les 10 premiers nombres pairs.*/ 
 for ($i = 1; $i <= 10; $i++) {
     $pair = $i * 2;
     echo "Nombre pair : $pair <br>"."<br>"."<br>";
@@ -14,4 +14,3 @@ Séance n°2 terminée
 for ($i = 1; $i <= 12; $i++) {
     echo "Séance n°" . $i . " terminée\n";
 }
-
