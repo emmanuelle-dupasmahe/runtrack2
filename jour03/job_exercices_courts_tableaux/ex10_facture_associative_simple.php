@@ -8,7 +8,7 @@ echo "<b><u>Facture :</b></u>\n"."<br>"."<br>";
 
 foreach ($achat as $produit) {
     $total_ligne = $produit['prix'] * $produit['qte'];
-    echo "Produit : <b>" . $produit['nom'] . " </b>| Prix unitaire : <b>" . $produit['prix'] . " € </b>| Quantité :<b> " . $produit['qte'] . "</b> | Total : <b>" . $total_ligne. " € </b>\n"."<br>";
+    echo "Produit : <b>" . $produit['nom'] . " </b>| Prix unitaire : <b>" . $produit['prix'] . " € </b>| Quantité :<b> " . $produit['qte'] . "</b> | Total : <b>" . $total_ligne. " € </b>\n"."<br>"."<br>";
     $total += $total_ligne; 
 }
 
