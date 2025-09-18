@@ -1,7 +1,7 @@
 <?php
 $contacts = [["nom"=>"Tartempion", "email"=> "tartempion@gmail.com", "telephone"=>"0670645687"],
 ["nom"=>"Tartempion2", "email"=> "tartempion2@gmail.com", "telephone"=>"0670645688"],
-["nom"=>"Tartempion", "email"=> "tartempion3@gmail.com", "telephone"=>"0670645689"]];
+["nom"=>"Tartempion3", "email"=> "tartempion3@gmail.com", "telephone"=>"0670645689"]];
 
 echo "<h2>Liste des contacts avant l'ajout :</h2>";
 
