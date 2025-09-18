@@ -5,13 +5,13 @@ $length = 0;
 while (isset($str[$length])) {
     $length++;
 }
-$lastChar = $str[$length - 1]; 
+$firstChar = $str[0];
 
-for ($i = $length - 1; $i > 0; $i--) {
-    $str[$i] = $str[$i - 1];
+for ($i = 0; $i < $length - 1; $i++) {
+    $str[$i] = $str[$i + 1];
 }
 
-$str[0] = $lastChar;
+$str[$length - 1] = $firstChar;
 
 echo $str;
 ?>
