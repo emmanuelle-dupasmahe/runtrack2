@@ -7,7 +7,7 @@
 </form>
 
 <?php
-$compteur_arguments = 0;
+
 
 if (isset($_GET['prenom']) && $_GET['prenom'] !== "") {
     echo "Ton prénom est " . ($_GET['prenom'])."<br>";
