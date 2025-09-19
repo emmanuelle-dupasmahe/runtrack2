@@ -1,4 +1,5 @@
-<!-- index.php -->
+<!-- construction d'une maison en entrant la largeur et la hauteur  get-->
+ 
  <h3> Afin de construire votre maison veuiller entrer une largeur et une hauteur en nombre </h3>
 <form action="index.php" method="get">
   <label>largeur :</label>

@@ -1,4 +1,4 @@
-<!-- pour le formulaire-->
+<!-- compte les arguments methode get-->
 
 <form action="index.php" method="post">
   <input type="text" name="prenom" placeholder="Ton prénom">

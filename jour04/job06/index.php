@@ -1,4 +1,5 @@
-<!-- index.php -->
+<!-- programme pour discriminer si le nombre est pair ou impaire methode get-->
+
  <h2> Veuiller entrer un nombre : </h2>
 <form action="index.php" method="get">
   <label>Nombre :</label>

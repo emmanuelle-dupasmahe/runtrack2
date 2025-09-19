@@ -1,4 +1,6 @@
-<!-- index.php -->
+
+<!-- formulaire pour avoir le nom et le mot de passe associé post -->
+
 <form action="index.php" method="post">
   <label>Utilisateur :</label>
   <input type="text" name="username"><br>
