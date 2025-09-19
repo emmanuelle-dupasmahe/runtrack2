@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<h1>Formulaire</h1>
+<h1>Entrer votre prénom et votre nom</h1>
 <form action="index.php" method="get">
     <input type="text" name="prenom" placeholder="Prénom"><br>
     <input type="text" name="nom" placeholder="Nom"><br>
