@@ -16,5 +16,5 @@ if (isset($_GET['number_1']) && $_GET['number_1'] !== "" && (isset($_GET['number
     $somme = $number_1 + $number_2;
     echo " <b>La somme est = ". $somme."</b><br>";
 }
-//echo " <b>La somme est = ". $somme."</b><br>";
+
 ?>
