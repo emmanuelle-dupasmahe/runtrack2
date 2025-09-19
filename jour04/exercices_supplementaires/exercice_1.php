@@ -1,4 +1,4 @@
-<!-- pour le formulaire-->
+<!-- affiche prénom et âge-->
 
 <form action="exercice_1.php" method="get">
   <input type="text" name="prenom" placeholder="Ton prénom">
