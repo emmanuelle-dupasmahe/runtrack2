@@ -1,4 +1,4 @@
-<!-- login.php -->
+<!-- index.php -->
 <form action="index.php" method="post">
   <label>Utilisateur :</label>
   <input type="text" name="username"><br>

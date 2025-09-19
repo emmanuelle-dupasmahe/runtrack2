@@ -1,4 +1,4 @@
-<!-- login.php -->
+<!-- index.php -->
  <h2> Veuiller entrer un nombre : </h2>
 <form action="index.php" method="get">
   <label>Nombre :</label>
