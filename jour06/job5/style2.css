@@ -1,0 +1,24 @@
+body {
+    background-color: #d6d30a; 
+    font-family: 'Times New Roman', serif;
+    color: #ed16cd; 
+}
+h3 {
+    color: #ce89b0; 
+    border-bottom: 2px solid #e4add4;
+    padding-bottom: 5px;
+}
+form {
+    background-color: #f6f677;
+    padding: 20px;
+    border: 2px solid #e8badb;
+    border-radius: 5px;
+}
+input[type="submit"] {
+    background-color: #e6b7eb;
+    color: #f211b6;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}

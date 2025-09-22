@@ -1,0 +1,38 @@
+body {
+    background-color: #333; 
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff; 
+}
+
+h3::before {
+  content: "🦥 🫎";
+  margin-right: 10px; 
+}
+
+h3 {
+    content: "🐈‍⬛";
+
+    color: #00ff00; 
+    border-bottom: 2px dashed #00ff00;
+    padding-bottom: 8px;
+}
+
+h3::after {
+  content: "🦥 🫎";
+  margin-right: 10px; 
+}
+
+form {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+}
+input[type="submit"] {
+    background-color: #00ff00;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
