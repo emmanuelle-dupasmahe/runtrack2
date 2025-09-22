@@ -4,8 +4,12 @@ $str2 = "Vive";
 $str3 = "!";
 //afficher: "Vive laPlateforme !"
 $result = $str2." ".$str." ".$str3;
-echo $result. "\n"."<br>";
+echo $result."<br>";
+echo "<p>$str2 $str $str3</p><br>";
+?>
+<?= "<p>$str2 $str $str3</p>"; ?>
 
+<?php
 //ajouter 4 à une variable
 $val = 6;
 echo $val. "\n";
