@@ -1,4 +1,4 @@
-<!--Formulaire qui permet de choisir un style.css-->
+<!--Formulaire qui permet de choisir un style.css à appliquer à mon formulaire-->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
