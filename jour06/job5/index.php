@@ -9,7 +9,7 @@
     <?php
     if (isset($_GET['choix_style'])) {
         $choix_style = $_GET['choix_style'];
-        $style_a_appliquer = 'css/default.css'; // Style par défaut
+        $style_a_appliquer = 'default.css'; // Style par défaut
 
         switch ($choix_style) {
             case 'style1':
