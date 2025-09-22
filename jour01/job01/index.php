@@ -13,7 +13,7 @@ echo "<p>$str2 $str $str3</p><br>";
 //ajouter 4 à une variable
 $val = 6;
 echo $val. "\n";
-$val = $val + 4;
+$val = $val + 4; //§val+=4;
 echo $val. "\n"."<br>";
 
 //changer la variable booleeene en false

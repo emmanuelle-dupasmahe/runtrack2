@@ -46,11 +46,11 @@ background-color: #bae3eeff;
 </tr>
 </thead>
 <tbody>
-<?php foreach ($variables as $variable): ?> <!--utilsation de la condition for dans php-->
+<?php foreach ($variables as $variable): ?> <!--utilisation de la condition for dans php-->
 <tr>
-<td><?php echo htmlspecialchars($variable['type']); ?></td>
-<td><?php echo htmlspecialchars($variable['name']); ?></td>
-<td><?php echo htmlspecialchars(print_r($variable['value'], true)); ?></td>
+<td><?php echo ($variable['type']); ?></td>
+<td><?php echo ($variable['name']); ?></td>
+<td><?php echo (print_r($variable['value'], true)); ?></td>
 </tr>
 <?php endforeach; ?>
 </tbody>
