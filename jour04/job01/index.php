@@ -23,6 +23,6 @@ if (isset($_GET['nom']) && $_GET['nom'] !== "") {
 if ($compteur_arguments > 0) {
     echo "Le nombre d'arguments GET est : " . $compteur_arguments."<br>";
 } else {
-    echo "Veuillez entrer votre prénom et nom dans le formulaire.";
+    echo "Veuillez entrer votre prénom et votre nom dans le formulaire.";
 }
 ?>
