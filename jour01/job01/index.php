@@ -1,9 +1,9 @@
 <?php
-$str = " La plateforme ";
-$str2 = "Vive ";
+$str = "La plateforme";
+$str2 = "Vive";
 $str3 = "!";
 //afficher: "Vive laPlateforme !"
-$result = $str2.$str.$str3;
+$result = $str2." ".$str." ".$str3;
 echo $result. "\n"."<br>";
 
 //ajouter 4 à une variable
