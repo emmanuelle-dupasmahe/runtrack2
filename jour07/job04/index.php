@@ -21,6 +21,7 @@ function calcule(float $a, string $operation, float $b) {
             return "Erreur : Opération non valide !";
     }
 }
+//essai de la fonction :
 
 echo calcule(5, '+', 5);
 echo "<br>";
