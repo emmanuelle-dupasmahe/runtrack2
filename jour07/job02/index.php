@@ -7,8 +7,6 @@ function bonjour($jour){
     }
     return($jour);
 }
-?>
-<?php
 bonjour(true); 
 echo "<br>";
 bonjour(false);

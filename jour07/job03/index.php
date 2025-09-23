@@ -1,5 +1,5 @@
 <?php
 function getHello(){
-    echo ("Hello la Plateforme !");
-    return 
+    return "Hello la Plateforme !";
 }
+echo getHello();
