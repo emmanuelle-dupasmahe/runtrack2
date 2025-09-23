@@ -67,7 +67,7 @@ function cesar($str, $decalage = 2) {
         $char = $str[$i];
         
         
-        if ($char >= 'a' && $char <= 'z') {
+        if ($char >= 'a'and $char <= 'z') {
             
             $position = 0;
             for ($j = 0; $j < 26; $j++) {
@@ -81,7 +81,7 @@ function cesar($str, $decalage = 2) {
             $resultat .= $alphabet_minuscules[$nouvelle_position];
         } 
         
-        elseif ($char >= 'A' && $char <= 'Z') {
+        elseif ($char >= 'A' and $char <= 'Z') {
             
             $position = 0;
             for ($j = 0; $j < 26; $j++) {
