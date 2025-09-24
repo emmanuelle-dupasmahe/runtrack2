@@ -49,7 +49,7 @@ function gras($str) {
     return $resultat;
 }
 
-//fonction qui décale les lettre de l'alphabet si le décalage est de 2 a devient c
+//fonction qui décale les lettres de l'alphabet si le décalage est de 2 (a devient c)
 
 function cesar($str, $decalage = 2) {
     $resultat = '';
@@ -181,7 +181,7 @@ if (isset($_GET['str']) and isset($_GET['fonction'])) {
     <title>Formulaire de transformation avec des fonctions</title>
 </head>
 <body>
-    <h3> Entrer un texte à transformer grâce aux fonctions que vous allez choisir.<br></H3>
+    <h3> <span style="color: blue;"><b>Entrer un texte à transformer grâce aux fonctions que vous allez choisir.</span></b><br></H3>
     <p> La fonction <span style="color: blue;">gras</span> <i>va transformer en <b>gras</b> les mots commençant par une majuscule.</i><br></p>
     <p> La fonction <span style="color: blue;">cesar</span>  <i>va décaler d'un certain décalage (2 par défaut) les lettres de votre texte (a devient c par exemple).</i><br></p>
     <p> La fonction <span style="color: blue;">plateforme</span>  <i>va ajouter _ aux mots se terminant par me.</i><br></p>
