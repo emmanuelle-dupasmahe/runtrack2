@@ -1,7 +1,7 @@
 <!-- fonction qui retourne un numero de chance compris entre 1 et 100 avec un formulaire qui demande le prenom-->
-<h3> Entrer votre prénom <br></h3>
+<h3> <span style="color: green;"><b>Entrer votre prénom </span></b><br></h3>
 <form method="post">
-<label>prenom :</label>
+<label>Prénom :</label>
 <input type="text" name="prenom"><br>
 <input type="submit" value="valider">
 </form>
@@ -16,13 +16,13 @@ function numeroChance($prenom){
     'k' => 107, 'l' => 108, 'm' => 109, 'n' => 110, 'o' => 111,
     'p' => 112, 'q' => 113, 'r' => 114, 's' => 115, 't' => 116,
     'u' => 117, 'v' => 118, 'w' => 119, 'x' => 120, 'y' => 121,
-    'z' => 122,
+    'z' => 122, '-'=> 45,
     'A' => 65, 'B' => 66, 'C' => 67, 'D' => 68, 'E' => 69, 
     'F' => 70, 'G' => 71,'H'=> 72,'I' => 73, 'J' => 74, 
     'K' => 75, 'L' => 76,'M' => 77, 'N' => 78, 'O' => 79, 
     'P' => 80, 'Q' => 81, 'R' => 82, 'S' => 83,
     'T'=> 84,'U' => 85, 'V' => 86, 'W' => 87, 
-    'X' => 88,'Y' => 89, 'Z' => 90);
+    'X' => 88,'Y' => 89, 'Z' => 90, 'è' => 232,'é' => 233, 'ë' => 235);
     
     while (isset($prenom[$i])) {
 
