@@ -1,6 +1,6 @@
 <?php
 
-// Fonction qui génère un mot de passe 
+// Fonction qui génère un mot de passe aleatoire
 
 function genererMotDePasse($longueur) {
 
@@ -8,7 +8,7 @@ function genererMotDePasse($longueur) {
     $mot_de_passe = "";
     
     $taille_chaine = 0;
-    // On calcule la taille de la chaîne de caractères manuellement
+    
     $i = 0;
     while(isset($chaine_caractere[$i])) {
         $taille_chaine++;
@@ -18,9 +18,7 @@ function genererMotDePasse($longueur) {
     $i = 0;
     while ($i < $longueur) {
         
-        
         $index_aleatoire = ($i * 7 + 13) % $taille_chaine;
-        
         $mot_de_passe .= $chaine_caractere[$index_aleatoire];
         $i++;
     }
