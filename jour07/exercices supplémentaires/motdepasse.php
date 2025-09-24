@@ -1,38 +1,35 @@
 <?php
-//fonction qui génère un mot de passe aléatoire 
-//qui doit être d'au moins 12 caractères avec une majuscule, 
-//1 chiffre et 1 caractère spécial (norme de l'ANSSI)
 
-function genererMotDePasse($longueur){
-    
-    $minuscule = "abcdefghijklmnopqrstuvwxyz";
-    $majuscule = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    $chiffre = "0123456789";
-    $caractere_special = "!@#$%^&*()_+-=[]{}|;:,.<>?";
+// Fonction qui génère un mot de passe 
 
+function genererMotDePasse($longueur) {
+
+    $chaine_caractere = "abcXYZ123mnu!@#";
     $mot_de_passe = "";
+    
     $taille_chaine = 0;
+    // On calcule la taille de la chaîne de caractères manuellement
+    $i = 0;
+    while(isset($chaine_caractere[$i])) {
+        $taille_chaine++;
+        $i++;
+    }
 
-    for ($i = 0; isset($minuscule[$i]); $i++) {
-        $taille_chaine++;
-    }
-    for ($i = 0; isset($majuscule[$i]); $i++) {
-        $taille_chaine++;
-    }
-    for ($i = 0; isset($chiffre[$i]); $i++) {
-        $taille_chaine++;
-    }
-    for ($i = 0; isset($caractere_special[$i]); $i++) {
-        $taille_chaine++;
-    }
-    for ($i = 0; $i < $longueur; $i++) {
-        $index = $i % $taille_chaine;
-        $mot_de_passe .= $minuscule.$majuscule.$chiffre.$caractere_special;
+    $i = 0;
+    while ($i < $longueur) {
+        
+        
+        $index_aleatoire = ($i * 7 + 13) % $taille_chaine;
+        
+        $mot_de_passe .= $chaine_caractere[$index_aleatoire];
+        $i++;
     }
     
     return $mot_de_passe;
 }
 
-$motDePasseCree = genererMotDePasse(14);
+$longueur_desiree = 12;
+$motDePasseCree = genererMotDePasse($longueur_desiree);
 echo "Le mot de passe généré est : " . $motDePasseCree;
+
 ?>
