@@ -1,0 +1,48 @@
+
+body {
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    color:#2f65ec;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px; 
+    width: 190px; /*j'ai mis 190px afin de ne pas avoir une ligne bleue à droite*/
+    margin: 0 auto;
+    background-color: #2f65ec; 
+}
+
+.cell {
+    color: #2f65ec; 
+    width: 60px;
+    height: 60px;
+    font-size: 2em;
+    cursor: pointer;
+    border: none; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white; 
+}
+
+.cell:hover {
+    background-color: #b3e0eb;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.reset-button {
+    color:#117d07;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #f0f008;
+}
