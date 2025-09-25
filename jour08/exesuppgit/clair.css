@@ -1,0 +1,25 @@
+/* --- Thème clair : fond clair et texte foncé --- */
+body {
+    background-color: #eae583;
+    color: #5916df;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #edef6c;
+}
+
+.button {
+    background-color: #e0e723;
+    color: #2013d2;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #df9c3f;
+}

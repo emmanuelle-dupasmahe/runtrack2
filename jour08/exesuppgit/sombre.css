@@ -1,0 +1,25 @@
+/* --- Thème sombre : fond sombre et texte clair --- */
+body {
+    background-color: #1c1c1c;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    padding: 20px;
+    border: 2px solid #444;
+    border-radius: 8px;
+    background-color: #2c2c2c;
+}
+
+.button {
+    background-color: #333333;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #555;
+}
