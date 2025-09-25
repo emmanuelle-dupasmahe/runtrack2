@@ -1,5 +1,5 @@
 <?php
-
+//création d'une session
 session_start(); 
 
 if (isset($_POST['reset'])) {

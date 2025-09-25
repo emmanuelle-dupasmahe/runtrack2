@@ -1,5 +1,5 @@
 <?php
-
+//création d'un cookie
 if (isset($_COOKIE['nbvisites'])) {
     
     $count = $_COOKIE['nbvisites'] + 1;
