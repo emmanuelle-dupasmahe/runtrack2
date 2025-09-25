@@ -37,20 +37,21 @@ if (isset($_POST['case'])) {
     if ($_SESSION['g'][$index] == '-' && !strpos($_SESSION['message'], 'gagné') && !strpos($_SESSION['message'], 'Match nul')) {
         $_SESSION['g'][$index] = $_SESSION['tour'];
         
+
         // Vérification de la victoire
         if (aGagne($_SESSION['g'], $_SESSION['tour'])) {
             $_SESSION['message'] = 'Le joueur ' . $_SESSION['tour'] . ' a gagné ! 💪😃';
         } else {
-            // Changement de tour
-            $_SESSION['tour'] = ($_SESSION['tour'] == 'X') ? 'O' : 'X';
-            $_SESSION['message'] = 'C\'est au tour de ' . $_SESSION['tour'];
-            
             // Vérification du match nul
             if (!in_array('-', $_SESSION['g'])) {
                 $_SESSION['message'] = 'Match nul ! 🤝';
-            }
+            } else {
+                // Changement de tour
+                $_SESSION['tour'] = ($_SESSION['tour'] == 'X') ? 'O' : 'X';
+                $_SESSION['message'] = 'C\'est au tour de ' . $_SESSION['tour'];
         }
     }
+}
 }
 ?>
 <!DOCTYPE html>
@@ -72,7 +73,7 @@ if (isset($_POST['case'])) {
     </form>
     <div class="message"><?= $_SESSION['message'] ?></div>
 
-    <?php if (strpos($_SESSION['message'], 'gagné') || strpos($_SESSION['message'], 'Match nul')): ?>
+    <?php if (strpos($_SESSION['message'], 'gagné') !==false || strpos($_SESSION['message'], 'Match nul') !==false): ?>
         <form method="POST">
             <button type="submit" name="reset" class="reset-button">Recommencer</button>
         </form>
