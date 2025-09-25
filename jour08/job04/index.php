@@ -2,11 +2,11 @@
 //un formulaire de connexion qui demande le prénom, s'il est validé on ajoute le prénom dans un cookie
 
 if (isset($_COOKIE['user_prenom'])) {
-    echo "Bonjour " . htmlspecialchars($_COOKIE['user_prenom']) ." ! <br><br>";
+    echo "<span style='font-size: 2em; color: blue;'>Bonjour " . htmlspecialchars($_COOKIE['user_prenom']) ." ! </span><br><br>";
     echo '<form method="post"><button type="submit" name="deco">Déconnexion</button></form>';
     
     // Si le bouton de déconnexion est cliqué, on supprime le cookie.
-    
+
     if (isset($_POST['deco'])) {
         setcookie('user_prenom', '', time() - 20);
         exit;
