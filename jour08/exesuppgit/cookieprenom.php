@@ -4,7 +4,7 @@
 if (isset($_POST['prenom']) && !empty($_POST['prenom'])) {
     $prenom = $_POST['prenom'];
     
-    //  cookie 'prenom' pour 3 secondes
+    //  cookie 'prenom' pour 3 secondes ppur vérifier que cela fonctionne il suffira de mettre 60*60
     setcookie('prenom', $prenom, time() + 3);
     
     // Cette nouvelle requête permettra au cookie d'être disponible.
