@@ -2,10 +2,10 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>La capacité moyenne des salles</title>
+    <title>Les étudiants nés entre 1998 et 2018.</title>
     <style>
         table {
-            width: 250px;
+            width: 100%;
             border-collapse: collapse;
         }
         th, td {
@@ -33,7 +33,7 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // requete SQL
-    $sql = "SELECT AVG(capacite) AS `La capacité moyenne des salles` FROM salles;";
+    $sql = "SELECT prenom, nom, naissance FROM etudiants WHERE YEAR(naissance) BETWEEN 1998 AND 2018;";
     $stmt = $pdo->query($sql);
 
     if ($stmt->rowCount() > 0) {
@@ -65,7 +65,7 @@ try {
         echo "</tbody>";
         echo "</table>";
     } else {
-        echo "0 résultats trouvés dans la table 'salles'.";
+        echo "0 résultats trouvés dans la table 'etudiants'.";
     }
 
 } catch(PDOException $e) {

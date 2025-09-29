@@ -2,10 +2,10 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>La capacité moyenne des salles</title>
+    <title>le nom des salles et de leurs étages</title>
     <style>
         table {
-            width: 250px;
+            width: 300px;
             border-collapse: collapse;
         }
         th, td {
@@ -33,7 +33,7 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // requete SQL
-    $sql = "SELECT AVG(capacite) AS `La capacité moyenne des salles` FROM salles;";
+    $sql = "SELECT salles.nom AS 'nom des salles' , etage.nom AS 'étage' FROM salles INNER JOIN etage ON salles.id_etage = etage.id;";
     $stmt = $pdo->query($sql);
 
     if ($stmt->rowCount() > 0) {
