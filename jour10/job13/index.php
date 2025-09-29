@@ -32,11 +32,10 @@ try {
     
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // requete SQL
+// requete SQL
     $sql = "SELECT salles.nom AS 'nom des salles' , etage.nom AS 'étage' FROM salles INNER JOIN etage ON salles.id_etage = etage.id;";
     $stmt = $pdo->query($sql);
-
-    if ($stmt->rowCount() > 0) {
+if ($stmt->rowCount() > 0) {
         echo "<table>";
         echo "<thead><tr>";
 

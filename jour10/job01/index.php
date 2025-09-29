@@ -1,82 +1,71 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Liste des étudiants</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 2px solid black;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #c7d9e7ff;
-
-        }
-    </style>
-</head>
-<body>
-
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "jour09";
+$host = 'localhost'; 
+$dbname = 'jour09';
+$username = 'root'; 
+$password = '';   
 
-//la connexion PDO on instancie un objet PDO
 try {
-    $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    
+    // Connexion à la base de données avec PDO
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+    // Définir le mode d'erreur de PDO sur Exception
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // on va récupérer tous les etudiants de la base etudiants avec la requête SQL
+    // Requête SQL pour récupérer toutes les données de la table etudiants
     $sql = "SELECT * FROM etudiants";
     $stmt = $pdo->query($sql);
 
-    if ($stmt->rowCount() > 0) {
-        echo "<table>";
-        echo "<thead><tr>";
+    // Récupérer toutes les lignes du résultat
+    $etudiants = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        
-        $firstRow = $stmt->fetch(PDO::FETCH_ASSOC);
-        if ($firstRow) {
-            foreach ($firstRow as $key => $value) {
-                echo "<th>" . htmlspecialchars($key) . "</th>";
-            }
-            
-            $stmt->execute();
+    // Vérifier si des données ont été trouvées
+    if ($etudiants) {
+        // Affichage du tableau HTML
+        echo '<!DOCTYPE html>
+              <html lang="fr">
+              <head>
+                  <meta charset="UTF-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>Liste des étudiants</title>
+                  <style>
+                      table { width: 100%; border-collapse: collapse; }
+                      th, td { border: 2px solid #ccc; padding: 8px; text-align: left; }
+                      th { background-color: #7cc8dfff; }
+                  </style>
+              </head>
+              <body>
+                  <h1>Liste des étudiants</h1>
+                  <table>';
+
+        // Affichage de l'en-tête du tableau (<thead>)
+        echo '<thead><tr>';
+        // Récupérer les noms des colonnes à partir de la première ligne
+        $column_names = array_keys($etudiants[0]);
+        foreach ($column_names as $col_name) {
+            echo '<th>' . htmlspecialchars($col_name) . '</th>';
         }
+        echo '</tr></thead>';
 
-        echo "</tr></thead>";
-        echo "<tbody>";
-
-        
-        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            echo "<tr>";
-            foreach ($row as $data) {
-                echo "<td>" . htmlspecialchars($data) . "</td>";
+        // Affichage du corps du tableau (<tbody>)
+        echo '<tbody>';
+        foreach ($etudiants as $etudiant) {
+            echo '<tr>';
+            foreach ($etudiant as $value) {
+                echo '<td>' . htmlspecialchars($value) . '</td>';
             }
-            echo "</tr>";
+            echo '</tr>';
         }
+        echo '</tbody>';
 
-        echo "</tbody>";
-        echo "</table>";
+        echo '</table>
+              </body>
+              </html>';
     } else {
-        echo "0 résultats trouvés dans la table 'etudiants'.";
+        echo "Aucun étudiant n'a été trouvé.";
     }
 
-} catch(PDOException $e) {
-    
-    die("La connexion a échoué : " . $e->getMessage());
+} catch (PDOException $e) {
+    // Gestion des erreurs de connexion
+    die("Erreur de connexion à la base de données: " . $e->getMessage());
 }
-
-// La connexion PDO est automatiquement fermée 
 ?>
-
-</body>
-</html>
