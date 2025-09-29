@@ -26,47 +26,54 @@ $username = "root";
 $password = ""; 
 $dbname = "jour09";
 
-// connexion
-$conn = new mysqli($servername, $username, $password, $dbname);
+//la connexion PDO
+try {
+    $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-// Vérification de la connexion
-if ($conn->connect_error) {
-    die("La connexion a échoué : " . $conn->connect_error);
-}
-// Requête SQL 
-$sql = "SELECT nom, capacite FROM salles";
-$result = $conn->query($sql);
+    // requete SQL
+    $sql = "SELECT nom, capacite FROM salles";
+    $stmt = $pdo->query($sql);
 
-if ($result->num_rows > 0) {
-    echo "<table>";
-    echo "<caption>Capacité des Salles</caption>";
-    
-    
-    echo "<thead><tr>";
-    
-    $fields = $result->fetch_fields();
-    foreach ($fields as $field) {
-        echo "<th>" . htmlspecialchars($field->name) . "</th>";
-    }
-    echo "</tr></thead>";
-    
-    echo "<tbody>";
+    if ($stmt->rowCount() > 0) {
+        echo "<table>";
+        echo "<thead><tr>";
 
-    while ($row = $result->fetch_assoc()) {
-        echo "<tr>";
-        foreach ($row as $data) {
-            echo "<td>" . htmlspecialchars($data) . "</td>";
+        
+        $firstRow = $stmt->fetch(PDO::FETCH_ASSOC);
+        if ($firstRow) {
+            foreach ($firstRow as $key => $value) {
+                echo "<th>" . htmlspecialchars($key) . "</th>";
+            }
+            
+            $stmt->execute();
         }
-        echo "</tr>";
+
+        echo "</tr></thead>";
+        echo "<tbody>";
+
+        
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            echo "<tr>";
+            foreach ($row as $data) {
+                echo "<td>" . htmlspecialchars($data) . "</td>";
+            }
+            echo "</tr>";
+        }
+
+        echo "</tbody>";
+        echo "</table>";
+    } else {
+        echo "0 résultats trouvés dans la table 'etudiants'.";
     }
-    echo "</tbody>";
-    echo "</table>";
-} else {
-    echo "No results found in the 'salles' table.";
+
+} catch(PDOException $e) {
+    
+    die("La connexion a échoué : " . $e->getMessage());
 }
 
-// on ferme la connexion
-$conn->close();
+// La connexion PDO est automatiquement fermée 
 ?>
 
 </body>
