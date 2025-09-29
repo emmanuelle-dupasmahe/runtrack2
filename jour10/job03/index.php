@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Nom et capacité de chacune des salles</title>
+    <title>Les étudiantes</title>
     <style>
         table {
             width: 100%;

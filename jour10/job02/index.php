@@ -65,7 +65,7 @@ try {
         echo "</tbody>";
         echo "</table>";
     } else {
-        echo "0 résultats trouvés dans la table 'etudiants'.";
+        echo "0 résultats trouvés dans la table 'salles'.";
     }
 
 } catch(PDOException $e) {

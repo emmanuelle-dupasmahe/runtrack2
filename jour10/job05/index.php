@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Liste des étudiants</title>
+    <title>Les étudiants qui ont moins de 18 ans</title>
     <style>
         table {
             width: 100%;
@@ -15,27 +15,25 @@
         }
         th {
             background-color: #c7d9e7ff;
-
         }
     </style>
 </head>
 <body>
-
 <?php
 
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "root"; 
+$password = ""; 
 $dbname = "jour09";
 
-//la connexion PDO on instancie un objet PDO
+//la connexion PDO
 try {
     $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // on va récupérer tous les etudiants de la base etudiants avec la requête SQL
-    $sql = "SELECT * FROM etudiants";
+    // requete SQL
+    $sql = "SELECT*FROM etudiants WHERE (YEAR(CURDATE()) - YEAR(naissance)) < 18;";
     $stmt = $pdo->query($sql);
 
     if ($stmt->rowCount() > 0) {
@@ -77,6 +75,3 @@ try {
 
 // La connexion PDO est automatiquement fermée 
 ?>
-
-</body>
-</html>
