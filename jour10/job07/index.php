@@ -29,7 +29,7 @@ try {
                   <title>Superficie totale des étages</title>
                   <style>
                       table { width: 200px; border-collapse: collapse; }
-                      th, td { border: 2px solid #ccc; padding: 8px; text-align: left; }
+                      th, td { border: 2px solid #ccc; padding: 8px; text-align: center; }
                       th { background-color: #7cc8dfff; }
                   </style>
               </head>

@@ -12,7 +12,7 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Requête SQL pour récupérer toutes les données de la table etudiants
-    $sql = "SELECT COUNT(*) FROM etudiants;";
+    $sql = "SELECT COUNT(*) AS 'Le nombre' FROM etudiants;";
     $stmt = $pdo->query($sql);
 
     // Récupérer toutes les lignes du résultat
@@ -29,7 +29,7 @@ try {
                   <title>Le nombre</title>
                   <style>
                       table { width: 100px; border-collapse: collapse; }
-                      th, td { border: 2px solid #ccc; padding: 8px; text-align: left; }
+                      th, td { border: 2px solid #ccc; padding: 8px; text-align: center; }
                       th { background-color: #7cc8dfff; }
                   </style>
               </head>
