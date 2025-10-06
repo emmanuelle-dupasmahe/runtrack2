@@ -1,19 +1,19 @@
 <?php
 $str = "On n’est pas le meilleur quand on le croit mais quand on le sait.";
 $voyelles = [
-    'a' => true, 'e' => true, 'i' => true, 'o' => true, 'u' => true, 'y' => true,
-    'A' => true, 'E' => true, 'I' => true, 'O' => true, 'U' => true, 'Y' => true,
+    "a" => 'v', "e" => 'v', "i" => 'v', "o" => 'v', "u" => 'v', "y" => 'v',
+    "A" => 'v', "E" => 'v', "I" => 'v', "O" => 'v', "U" => 'v', "Y" => 'v'
 ];
 
 $consonnes = [
-    'b' => true, 'c' => true, 'd' => true, 'f' => true, 'g' => true, 'h' => true,
-    'j' => true, 'k' => true, 'l' => true, 'm' => true, 'n' => true, 'p' => true,
-    'q' => true, 'r' => true, 's' => true, 't' => true, 'v' => true, 'w' => true,
-    'x' => true, 'z' => true,
-    'B' => true, 'C' => true, 'D' => true, 'F' => true, 'G' => true, 'H' => true,
-    'J' => true, 'K' => true, 'L' => true, 'M' => true, 'N' => true, 'P' => true,
-    'Q' => true, 'R' => true, 'S' => true, 'T' => true, 'V' => true, 'W' => true,
-    'X' => true, 'Z' => true,
+    'b' => 'v', 'c' => 'v', 'd' => 'v', 'f' => 'v', 'g' => 'v', 'h' => 'v',
+    'j' => 'v', 'k' => 'v', 'l' => 'v', 'm' => 'v', 'n' => 'v', 'p' => 'v',
+    'q' => 'v', 'r' => 'v', 's' => 'v', 't' => 'v', 'v' => 'v', 'w' => 'v',
+    'x' => 'v', 'z' => 'v',
+    'B' => 'v', 'C' => 'v', 'D' => 'v', 'F' => 'v', 'G' => 'v', 'H' => 'v',
+    'J' => 'v', 'K' => 'v', 'L' => 'v', 'M' => 'v', 'N' => 'v', 'P' => 'v',
+    'Q' => 'v', 'R' => 'v', 'S' => 'v', 'T' => 'v', 'V' => 'v', 'W' => 'v',
+    'X' => 'v', 'Z' => 'v'
 ];
 
 $dic = [
