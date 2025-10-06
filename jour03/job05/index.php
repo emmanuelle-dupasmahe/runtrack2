@@ -15,7 +15,7 @@ $consonnes = [
     'Q' => 'v', 'R' => 'v', 'S' => 'v', 'T' => 'v', 'V' => 'v', 'W' => 'v',
     'X' => 'v', 'Z' => 'v'
 ];
-
+//Les voyelles et les consonnes sont maintenant les CLES du tableau.
 $dic = [
     'voyelles' => 0,
     'consonnes' => 0
