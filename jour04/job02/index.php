@@ -1,5 +1,4 @@
 
-<!--présente les arguments et les valeurs associées dans un tableau-->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
