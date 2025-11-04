@@ -1,9 +1,9 @@
 <?php
 function bonjour($jour){
     if ($jour === true) {
-        echo ("Bonjour"); // return "Bonjour";
+        echo ("Bonjour"); 
     } else {
-        echo ("Bonsoir"); // return "Bonsoir"
+        echo ("Bonsoir"); 
     }
     return($jour);
 }
